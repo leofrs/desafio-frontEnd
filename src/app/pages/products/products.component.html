@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    @for (item of products; track item) {
+    <li>{{ item.title }}</li>
+    } @empty {
+    <li>No items found</li>
+    }
+  </ul>
+</div>
