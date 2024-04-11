@@ -30,7 +30,12 @@ Requisitos Opcionais (Diferencial): Se optar por utilizar Angular, será um dife
 $ git clone git@github.com:leofrs/desafio-frontEnd.git
 ```
 
-Após ter feito o clone, instale as dependências necessárias para rodar o projeto. Com a pasta do projeto aberta no terminal, execute os seguintes comandos um por vêz
+obs: Caso não queira realizar o clone do projeto, basta realizar download
+1 - Vá na opção `<Code>`
+2 - Após clicar, vai aparecer a opção `Download ZIP`
+3 - Ele vai vir compactado em um arquivo `.ZIP`. Faça a extração e siga os próximos passos abaixo.
+
+Após ter feito o clone ou download, instale as dependências necessárias para rodar o projeto. Com a pasta do projeto aberta no terminal, execute os seguintes comandos um por vêz
 
 ```bash
 # Se você utiliza npm, abra a pasta client no terminal e em outro terminal abra a pasta server e insira o seguinte comendo em cada terminal
@@ -59,5 +64,3 @@ senha2: leo2159
 
 obs: O email1 e senha1 também vão estar disponíveis na tela de login para uma melhor visualização.
 ```
-
-Este Projeto utiliza a lincença MIT.
