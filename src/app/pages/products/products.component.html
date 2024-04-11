@@ -1,9 +1,22 @@
-<div>
-  <ul>
-    @for (item of products; track item) {
-    <li>{{ item.title }}</li>
-    } @empty {
-    <li>No items found</li>
-    }
-  </ul>
+<app-navbar />
+<div class="products-container">
+  @for (item of products; track item.id) {
+  <div class="product-card">
+    <div class="product-tumb">
+      <img src="{{ item.thumbnail }}" alt="" />
+    </div>
+    <div class="product-details">
+      <span class="product-catagory">{{ item.category }}</span>
+      <h4>{{ item.title }}</h4>
+
+      <div class="product-bottom-details">
+        <div class="product-price">R$ {{ item.price }},00</div>
+        <div class="product-links">
+          <a (click)="adicionarAoCarrinho(item)">Adicionar ao carrinho</a>
+          <a (click)="viewDetails(item.id)">Ver Detalhes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
 </div>

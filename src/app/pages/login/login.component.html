@@ -1,0 +1,48 @@
+<section>
+  <div class="login-container" id="container">
+    <div class="form-container sign-in-container">
+      <form (ngSubmit)="submitLoginForm()">
+        <h1>Login</h1>
+        <span>Email: leo&#64;leo.com</span>
+        <span>Senha: leo159</span>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          autofocus="true"
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Password"
+        />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-right">
+          <h1>Seja bem vindo!</h1>
+          <p>
+            Espero que esse meu projeto possa gerar um impacto positivo.
+            Agradeço pela oportunidade de realizar esse desafio e que a sua
+            expriência com ele seja a melhor possível.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>
+    Desenvolvido por <i class="fa fa-heart"></i>
+    <a>Leonardo Santos</a>
+    - Veja o meu perfil no LinkedIn
+    <a target="_blank" href="https://www.linkedin.com/in/leofrs/">clique aqui</a
+    >.
+  </p>
+</footer>

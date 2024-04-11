@@ -1,1 +1,42 @@
-<p>products-details works!</p>
+<section *ngIf="productDetails" class="productDetails-container">
+  <app-navbar />
+  <div class="content">
+    <div class="pics">
+      <span class="main-img"><img src="{{ productDetails.thumbnail }}" /></span>
+      <div *ngFor="let image of productDetails.images" class="additional-img">
+        <img [src]="image" alt="{{ productDetails.title }}" />
+      </div>
+    </div>
+    <div class="product">
+      <span class="category">{{ productDetails.category }}</span>
+      <span class="stock">{{ productDetails.stock }} und.</span>
+      <h1>{{ productDetails.title }}</h1>
+      <div class="block-price-rating clearfix">
+        <div class="block-price clearfix">
+          <div class="price-new clearfix">
+            <span class="price-new-dollar"
+              >RS {{ productDetails.price }},00</span
+            >
+          </div>
+        </div>
+        <div class="block-rating clearfix">
+          <span class="review">{{ productDetails.rating }} Reviews</span>
+          <span class="rating"
+            ><img
+              src="http://thrivedigital.wpengine.com/wp-content/uploads/2015/03/Review-Stars.png"
+          /></span>
+        </div>
+      </div>
+      <div class="descr">
+        <p>
+          {{ productDetails.description }}
+        </p>
+      </div>
+      <div class="block-select clearfix">
+        <button class="btn" (click)="adicionarAoCarrinho(productDetails)">
+          Adicionar ao carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

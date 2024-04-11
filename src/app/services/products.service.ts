@@ -5,7 +5,7 @@ import axios from 'axios';
   providedIn: 'root',
 })
 export class ProductsService {
-  api: string = 'https://dummyjson.com/products';
+  api: string = 'https://dummyjson.com';
 
   constructor() {
     this.getProducts();
@@ -13,10 +13,19 @@ export class ProductsService {
 
   async getProducts() {
     try {
-      const response = await axios.get(`${this.api}`);
+      const response = await axios.get(`${this.api}/products`);
       return response.data;
     } catch (error) {
       return 'Error interno encontrado ' + error;
+    }
+  }
+  async getProductDetails(id: number) {
+    try {
+      const response = await axios.get(`${this.api}/products/${id}`);
+      return response.data;
+    } catch (error) {
+      console.error('Erro ao obter detalhes do produto:', error);
+      throw error;
     }
   }
 }

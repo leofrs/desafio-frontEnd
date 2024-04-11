@@ -1,0 +1,33 @@
+<app-navbar />
+<div class="cart-container">
+  <h2>Seu Carrinho</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of showitensNoCarrinho()">
+        <td>{{ item.title }}</td>
+        <td>R$ {{ item.price }}</td>
+        <td>
+          <button (click)="adicionarQuantidade(item)">+</button>
+          {{ item.quantity }}
+          <button (click)="removerQuantidade(item)">-</button>
+        </td>
+        <td>
+          <button (click)="removerItem(item)">Remover</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="cart-summary">
+    <p>Total de Produtos: {{ showQuantidadeNoCarrinho() }}</p>
+    <p>Preço Total: R$ {{ getPrecoTotal() }},00</p>
+    <button>Comprar</button>
+  </div>
+</div>

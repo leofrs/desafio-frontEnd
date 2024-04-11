@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<nav id="nav-1">
+  <a class="link-1" (click)="home()"
+    >Home <ng-icon name="bootstrapHouse"></ng-icon
+  ></a>
+  <a class="link-1" (click)="cart()"
+    >Carrinho <ng-icon name="bootstrapCart"></ng-icon
+    ><span>{{ showQuantidadeNoCarrinho() }}</span></a
+  >
+
+  <a class="link-1" (click)="logout()"
+    >Sair <ng-icon name="bootstrapDoorOpen"></ng-icon
+  ></a>
+</nav>
